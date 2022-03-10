@@ -4,11 +4,13 @@ namespace Roots\Acorn\Assets;
 
 use Illuminate\Support\Arr;
 use Illuminate\Support\Collection;
+use Roots\Acorn\Assets\Concerns\Dequeuable;
 use Roots\Acorn\Assets\Concerns\Enqueuable;
 use Roots\Acorn\Assets\Contracts\Bundle as BundleContract;
 
 class Bundle implements BundleContract
 {
+    use Dequeuable;
     use Enqueuable;
 
     protected $id;
